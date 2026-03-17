@@ -1,0 +1,126 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Logging Service API",
+    "version": "1.0.0",
+    "description": "Logging microservice for Smart Campus Service System"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3004",
+      "description": "Local development server"
+    }
+  ],
+  "paths": {
+    "/log": {
+      "post": {
+        "summary": "Create log entry",
+        "tags": ["Logs"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "service": {
+                    "type": "string",
+                    "example": "request-service"
+                  },
+                  "action": {
+                    "type": "string",
+                    "example": "create_request"
+                  },
+                  "requestId": {
+                    "type": "string"
+                  },
+                  "userId": {
+                    "type": "string"
+                  },
+                  "details": {
+                    "type": "string"
+                  },
+                  "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "required": ["service", "action"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Log entry recorded"
+          },
+          "400": {
+            "description": "Missing required fields"
+          }
+        }
+      },
+      "get": {
+        "summary": "Get all logs",
+        "tags": ["Logs"],
+        "responses": {
+          "200": {
+            "description": "List of all logs"
+          }
+        }
+      }
+    },
+    "/log/{service}": {
+      "get": {
+        "summary": "Get logs for a service",
+        "tags": ["Logs"],
+        "parameters": [
+          {
+            "name": "service",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Service logs retrieved"
+          }
+        }
+      }
+    },
+    "/log/user/{userId}": {
+      "get": {
+        "summary": "Get logs for a user",
+        "tags": ["Logs"],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User logs retrieved"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "tags": ["Health"],
+        "responses": {
+          "200": {
+            "description": "Service is running"
+          }
+        }
+      }
+    }
+  }
+}

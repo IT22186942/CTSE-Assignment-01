@@ -1,0 +1,158 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Request Service API",
+    "version": "1.0.0",
+    "description": "Request management microservice for Smart Campus Service System"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3002",
+      "description": "Local development server"
+    }
+  ],
+  "paths": {
+    "/request": {
+      "post": {
+        "summary": "Create a new service request",
+        "tags": ["Requests"],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "example": "Fix water leakage"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "There is a water leak in room 101"
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": ["maintenance", "repair", "facility"],
+                    "example": "maintenance"
+                  }
+                },
+                "required": ["title", "description", "type"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Request created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "request": {
+                      "type": "object"
+                    },
+                    "notificationStatus": {
+                      "type": "string"
+                    },
+                    "loggingStatus": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing required fields"
+          },
+          "401": {
+            "description": "Unauthorized - invalid token"
+          }
+        }
+      },
+      "get": {
+        "summary": "Get all requests",
+        "tags": ["Requests"],
+        "responses": {
+          "200": {
+            "description": "List of all requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "totalRequests": {
+                      "type": "integer"
+                    },
+                    "requests": {
+                      "type": "array"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/request/{userId}": {
+      "get": {
+        "summary": "Get requests for a specific user",
+        "tags": ["Requests"],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User requests retrieved"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "tags": ["Health"],
+        "responses": {
+          "200": {
+            "description": "Service is running"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

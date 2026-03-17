@@ -1,0 +1,99 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Notification Service API",
+    "version": "1.0.0",
+    "description": "Notification microservice for Smart Campus Service System"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3003",
+      "description": "Local development server"
+    }
+  ],
+  "paths": {
+    "/notify": {
+      "post": {
+        "summary": "Send notification",
+        "tags": ["Notifications"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userId": {
+                    "type": "string"
+                  },
+                  "userName": {
+                    "type": "string"
+                  },
+                  "requestId": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "message": {
+                    "type": "string"
+                  }
+                },
+                "required": ["userId", "requestId", "message"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Notification sent successfully"
+          },
+          "400": {
+            "description": "Missing required fields"
+          }
+        }
+      },
+      "get": {
+        "summary": "Get all notifications",
+        "tags": ["Notifications"],
+        "responses": {
+          "200": {
+            "description": "List of all notifications"
+          }
+        }
+      }
+    },
+    "/notify/{userId}": {
+      "get": {
+        "summary": "Get notifications for a user",
+        "tags": ["Notifications"],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User notifications retrieved"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "tags": ["Health"],
+        "responses": {
+          "200": {
+            "description": "Service is running"
+          }
+        }
+      }
+    }
+  }
+}
