@@ -9,10 +9,11 @@ Your comprehensive viva preparation package is ready! Here's what has been creat
 ### 7 COMPREHENSIVE DOCUMENTS
 
 #### 1. **README_VIVA_MATERIALS.md** (THIS IS YOUR MASTER INDEX)
+
 - 📍 **Purpose**: Navigation guide for all materials
 - 📌 **Use this first** to understand how to use everything else
 - ⏱️ **Read time**: 15 minutes
-- 🎯 **Contains**: 
+- 🎯 **Contains**:
   - What each document is for
   - Suggested preparation timeline (3 days)
   - Document usage statistics
@@ -21,12 +22,13 @@ Your comprehensive viva preparation package is ready! Here's what has been creat
 ---
 
 #### 2. **VIVA_PREPARATION.md** (COMPREHENSIVE REFERENCE) ⭐
+
 - 📍 **Size**: ~8000 words, 69 sections
 - 🎯 **Purpose**: Complete project documentation
 - ⏱️ **Read time**: 2-3 hours (read in sections)
 - 📚 **Contains**:
   - ✅ Project overview (what, why, how)
-  - ✅ Architecture and design patterns  
+  - ✅ Architecture and design patterns
   - ✅ Detailed explanation of all 4 microservices
   - ✅ Technology stack and why each choice
   - ✅ Security implementation (7 layers)
@@ -39,7 +41,7 @@ Your comprehensive viva preparation package is ready! Here's what has been creat
   - ✅ **30 Expected Viva Questions with Detailed Answers**
   - ✅ Demo scenarios
 
-- **When to use**: 
+- **When to use**:
   - Deep technical questions
   - "How does X work?" questions
   - Understanding design decisions
@@ -48,6 +50,7 @@ Your comprehensive viva preparation package is ready! Here's what has been creat
 ---
 
 #### 3. **QUICK_REFERENCE.md** (CHEAT SHEET) ⚡
+
 - 📍 **Size**: ~2500 words, highly condensed
 - 🎯 **Purpose**: One-page answers, quick lookup
 - ⏱️ **Read time**: 5-10 minutes (read 2-3 times)
@@ -72,6 +75,7 @@ Your comprehensive viva preparation package is ready! Here's what has been creat
 ---
 
 #### 4. **DEMO_GUIDE.md** (HANDS-ON WALKTHROUGH) 🎬
+
 - 📍 **Size**: ~3000 words with complete commands
 - 🎯 **Purpose**: Step-by-step demonstration guide
 - ⏱️ **Read time**: 30 minutes (then 30+ minutes to practice)
@@ -104,6 +108,7 @@ Your comprehensive viva preparation package is ready! Here's what has been creat
 ---
 
 #### 5. **VIVA_FAQ.md** (DEEP DIVE Q&A) 🎓
+
 - 📍 **Size**: ~6000 words, 50+ questions
 - 🎯 **Purpose**: Deep technical and conceptual understanding
 - ⏱️ **Read time**: 2-3 hours (read in categories)
@@ -128,6 +133,7 @@ Your comprehensive viva preparation package is ready! Here's what has been creat
 ---
 
 #### 6. **CHEAT_SHEET.md** (ONE-PAGE PRINTABLE) 📄
+
 - 📍 **Size**: Fits on 1-2 printed pages
 - 🎯 **Purpose**: Last-minute reference before viva
 - ⏱️ **Read time**: 5 minutes
@@ -156,6 +162,7 @@ Your comprehensive viva preparation package is ready! Here's what has been creat
 ---
 
 #### 7. **VIVA_PANEL_COMMANDS.md** (SHOWCASE COMMANDS) 🖥️
+
 - 📍 **Purpose**: Exact terminal and browser commands for viva panel
 - 📌 **Use this during viva** to show the live system and GitHub Actions run
 - ⏱️ **Read time**: 5 minutes
@@ -201,6 +208,7 @@ Coverage:
 ### **3-Day Preparation Plan**
 
 **Day 1: Understanding (5-6 hours)**
+
 ```
 Morning (2 hours):
 □ Read README_VIVA_MATERIALS.md completely
@@ -217,6 +225,7 @@ Afternoon (3-4 hours):
 ```
 
 **Day 2: Deep Learning (6-8 hours)**
+
 ```
 Morning (3 hours):
 □ Read VIVA_PREPARATION sections 11-16
@@ -234,6 +243,7 @@ Afternoon (3-5 hours):
 ```
 
 **Day 3: Practice & Refresh (3-4 hours)**
+
 ```
 Morning (2-3 hours):
 □ Run DEMO_GUIDE complete walkthrough
@@ -255,12 +265,14 @@ Before Viva (30 min - 1 hour):
 ## 📋 HOW TO USE EACH DOCUMENT
 
 ### **Use README_VIVA_MATERIALS for:**
+
 - Navigation and overview
 - Understanding what each document contains
 - Suggested timeline
 - Success metrics
 
 ### **Use VIVA_PREPARATION for:**
+
 - Complete project explanation
 - Detailed service descriptions
 - Technology decisions explanation
@@ -269,6 +281,7 @@ Before Viva (30 min - 1 hour):
 - Workflow diagrams and flows
 
 ### **Use QUICK_REFERENCE for:**
+
 - Quick fact lookup
 - Port numbers and roles
 - Workflow reminders
@@ -276,6 +289,7 @@ Before Viva (30 min - 1 hour):
 - One-page mental refresh
 
 ### **Use DEMO_GUIDE for:**
+
 - Live demonstration (mandatory!)
 - All commands ready to copy-paste
 - Step-by-step walkthrough
@@ -283,6 +297,7 @@ Before Viva (30 min - 1 hour):
 - Docker feature showcase
 
 ### **Use VIVA_FAQ for:**
+
 - Deep technical understanding
 - "Why" questions answers
 - Conceptual understanding (CAP, eventually consistent)
@@ -290,6 +305,7 @@ Before Viva (30 min - 1 hour):
 - Scaling and production improvements
 
 ### **Use CHEAT_SHEET for:**
+
 - Last-minute refresh (1 hour before)
 - Quick facts during viva (if notes allowed)
 - Printed one-page reference
@@ -303,23 +319,27 @@ Before Viva (30 min - 1 hour):
 After using these materials, you'll be able to:
 
 ✅ **Explain your project**
+
 - What it is (microservices system)
 - Why you built it (learn cloud computing)
 - How it works (architecture explanation)
 
 ✅ **Answer technical questions**
+
 - How authentication works (JWT + bcrypt)
 - How services communicate (REST, retry logic)
 - Why each technology choice
 - Trade-offs and alternatives
 
 ✅ **Demonstrate the system**
+
 - Run complete workflow (9 steps, 5 minutes)
 - Show error handling
 - Explain what's happening in real-time
 - Show Docker benefits
 
 ✅ **Discuss advanced concepts**
+
 - CAP theorem and eventual consistency
 - Scaling to millions of users
 - Production improvements
@@ -327,6 +347,7 @@ After using these materials, you'll be able to:
 - Monolith vs microservices
 
 ✅ **Handle difficult questions**
+
 - "What if service crashes?" → Graceful degradation
 - "Why not use X?" → Trade-off discussion
 - "How to make production-ready?" → Concrete steps
@@ -337,6 +358,7 @@ After using these materials, you'll be able to:
 ## 🚀 QUICK START - TODAY
 
 ### Right Now
+
 ```bash
 1. Read this file (README_VIVA_MATERIALS.md)
 2. Skim README_VIVA_MATERIALS.md
@@ -346,6 +368,7 @@ After using these materials, you'll be able to:
 ```
 
 ### Tomorrow
+
 ```bash
 1. Read VIVA_PREPARATION.md (architecture sections)
 2. Read VIVA_FAQ.md (technical sections)
@@ -355,6 +378,7 @@ After using these materials, you'll be able to:
 ```
 
 ### Before Viva
+
 ```bash
 1. Read CHEAT_SHEET.md (last minute)
 2. Read QUICK_REFERENCE.md (refresh)
@@ -370,6 +394,7 @@ After using these materials, you'll be able to:
 ### 💡 The Demo is Your Ace
 
 The demonstration is your strongestcard. When stuck on questions:
+
 - Do the demo (shows understanding)
 - Explain what's happening
 - Answer was implicitly shown
@@ -385,6 +410,7 @@ The demonstration is your strongestcard. When stuck on questions:
 ### 📊 Use Analogies
 
 If stuck explaining:
+
 - JWT = "Passport ID that proves who you are"
 - Microservices = "Different departments in company"
 - Docker = "Shipping container for app"
@@ -394,6 +420,7 @@ If stuck explaining:
 ### 🎬 Practice the Demo
 
 Run through DEMO_GUIDE at least 3 times:
+
 - Day before viva (full run)
 - Morning of viva (quick run)
 - Know exact commands by muscle memory
@@ -434,6 +461,7 @@ Demo commands → DEMO_GUIDE (copy-paste ready)
 ## 🎯 FINAL THOUGHTS
 
 You've built a **professional-grade microservices application** that demonstrates:
+
 - Distributed systems thinking
 - Cloud computing concepts
 - DevOps practices

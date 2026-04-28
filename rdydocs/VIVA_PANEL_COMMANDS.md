@@ -14,6 +14,7 @@ docker compose up --build
 ```
 
 What to show:
+
 - All 4 services starting
 - Frontend starting
 - Health checks becoming healthy
@@ -27,6 +28,7 @@ docker compose ps
 ```
 
 What to say:
+
 - Each service is containerized
 - Docker Compose is orchestrating the system
 - Healthy status proves readiness
@@ -41,6 +43,7 @@ docker compose logs -f contract-service
 ```
 
 What to show:
+
 - Service startup messages
 - Any service-to-service calls
 - Error handling if needed
@@ -57,6 +60,7 @@ Open these tabs:
 - http://localhost:3004/api-docs
 
 What to say:
+
 - Each microservice has its own OpenAPI contract
 - This supports independent deployment and testing
 
@@ -71,6 +75,7 @@ Open your GitHub repository in browser and go to:
 - Show job logs for build steps
 
 What to highlight:
+
 - Dependency install
 - Frontend build
 - Docker image build
@@ -90,6 +95,7 @@ node .\scripts\e2e-check.js
 ```
 
 What this does:
+
 - Registers student and admin users
 - Logs them in
 - Applies for a contract
@@ -98,6 +104,7 @@ What this does:
 - Verifies notifications
 
 What to say:
+
 - This proves inter-service communication end to end
 - It shows the system working beyond static screenshots
 
