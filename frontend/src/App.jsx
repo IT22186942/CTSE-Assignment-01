@@ -142,7 +142,7 @@ export default function App() {
     <div className="app-shell">
       <header className="hero">
         <h1>Smart Mall Management System</h1>
-        <p>Cloud-native microservices demo for university assignment</p>
+        <p>Cloud-native microservices</p>
         <div className="session-bar">
           <span>{currentUser ? `${currentUser.name} (${currentUser.role})` : "Not logged in"}</span>
           {currentUser && (
